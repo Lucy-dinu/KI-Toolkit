@@ -626,9 +626,10 @@
             `).join('');
         }
 
-        function toggleDetails(activityId) {
-    const details = document.getElementById(`details-${activityId}`);
-    const btn = details.previousElementSibling.querySelector('.expand-btn');
+       function toggleDetails(activityId) {
+    const details = document.getElementById('details-' + activityId);
+    const card = details.closest('.activity-card');
+    const btn = card.querySelector('.expand-btn');
     
     if (details.classList.contains('show')) {
         details.classList.remove('show');
